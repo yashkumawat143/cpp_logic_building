@@ -1,0 +1,420 @@
+Question 16: Check Armstrong Number**
+
+Write a C program using a while loop to check whether a number is an Armstrong number or not.
+
+
+
+#include<iostream>
+using namespace std;
+int main(){
+    int num,digit=0,sum=0,temp;
+    cout<<"enter the number";
+    cin>>num;
+    while(num!=0){
+        digit=num%10;
+        sum=sum+digit*digit*digit;
+        num=num/10;
+        
+    }
+    cout<<sum;
+    if(temp==sum){
+        cout<<"it is a amstrong number";
+    }
+    else{
+        cout<<"it is not a amstrong number";
+    }
+    
+    
+    
+    
+    return 0;
+}
+
+
+ **Question 17: Display Fibonacci Series** 	
+
+Write a C program using a while loop to print the first N terms of the Fibonacci series.
+
+#include<iostream>
+using namespace std;
+int main(){
+    int n1=0,n2=1,n3;
+    int i=1;
+    while(i<=5){
+        n3=n1+n2;
+        n1=n2;
+        n2=n3;
+        i++;
+    }
+    cout<<n1<<endl;
+    cout<<n2;
+    
+    
+    return 0;
+}
+
+
+Question 18: Find Greatest Digit**
+
+Write a C program using a while loop to find the greatest (largest) digit in a given number.
+
+#include<iostream>
+using namespace std;
+int main(){
+    int num,digit,max=0;
+    cout<<"enter the number";
+    cin>>num;
+    while(num>0){
+        digit=num%10;
+        if(digit>max){
+            max=digit;
+        }
+        num=num/10;
+        
+    }
+    cout<<"the max value:"<<max;
+    
+    return 0;
+}
+
+
+Question 19: Find Smallest Digit**
+
+Write a C program using a while loop to find the smallest digit in a given number.
+
+#include<iostream>
+using namespace std;
+int main(){
+    int digit,num,min=9;
+    cout<<"enter the number";
+    cin>>num;
+    while(num!=0){
+        digit=num%10;
+        if(digit<min){
+            min=digit;
+        }
+        num=num/10;
+        
+    }
+    cout<<min;
+    
+    return 0;
+}
+
+Q... find the factorial;
+
+#include<iostream>
+using namespace std;
+int main(){
+    int n,i,fac=1;
+    cout<<"enter the number";
+    cin>>n;
+    i=1;
+    while(i<=n){
+        fac=fac*i;
+        i++;
+    }
+    cout<<fac;
+    
+    
+    return 0;
+}
+
+Question 20: Count Positive and Negative Numbers**
+
+Write a C program using a while loop to take N numbers from the user and count how many are positive and how many are negative.
+
+
+#include<iostream>
+using namespace std;
+int main(){
+    int n,count=0;
+    cout<<"enter the number";
+    cin>>n;
+    while(n!=0){
+        if(n>=0){
+            cout<<"it is positive";
+            
+            
+        }
+        else{
+            cout<<"it is negative";
+        }
+        n=n/10;
+        count++;
+    }
+    cout<<count;
+    
+    
+    return 0;
+}
+
+
+
+*Question 22: Check Prime Number**
+
+Write a C program using a while loop to check whether a given number is a prime number.
+
+
+#include<iostream>
+using namespace std;
+int main(){
+    int n,count=0,i;
+    cout<<"enter the number";
+    cin>>n;
+    i=1;
+    while(i<=n){
+        if(n%i==0){
+            
+            count++;
+        }
+        i++;
+        
+    }
+    if(count==2){
+        cout<<"it is a prime number";
+    }
+    else{
+        cout<<"it is not a prime number";
+    }
+    
+    
+    return 0;
+}
+
+
+
+Question 23: Display Days Using Number**
+
+Write a C program that keeps asking for a number (1–7) and prints the day name (1=Monday, 2=Tuesday, etc.) using a while loop until the user enters 0 to stop.
+
+#include<iostream>
+using namespace std;
+int main(){
+    
+    int n;
+    while(1){
+        cout<<"enter the number and press 0 for stop";
+        cin>>n;
+        
+        if(n==0){
+            break;
+        }
+        
+        if(n==1){
+            cout<<"monday"<<endl;
+        }
+        else if(n==2){
+            cout<<"tuesday"<<endl;
+        }
+        else if(n==3){
+            cout<<"wednesday"<<endl;
+        }
+        else if(n==4){
+            cout<<"thursday"<<endl;
+        }
+        else if(n==5){
+            cout<<"friday"<<endl;
+        }
+        else if(n==6){
+            cout<<"saturday"<<endl;
+        }
+        else if(n==7){
+            cout<<"sunday"<<endl;
+            
+        }
+        else{
+            cout<<"choice only valid number";
+        }
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    return 0;
+}
+
+
+
+
+*Question 24: ATM Withdrawal Simulation**
+
+Write a C program using a while loop to simulate an ATM — ask for withdrawal amounts until balance becomes less than the withdrawal amount.
+
+#include<iostream>
+using namespace std;
+int main() {
+	int withdrawal,balance=1000;
+	
+	while(1) {
+        cout<<"enter the amount";
+	    cin>>withdrawal;
+		if(withdrawal<=balance) {
+			balance=balance-withdrawal;
+			cout<<"withdreawal successful"<<endl;
+			cout<<"your balance"<<balance<<endl;
+		}
+		else {
+			cout<<"you have no sifficient balance"<<endl;
+			break;
+		}
+
+	}
+	cout<<"the ATM season end";
+
+
+	return 0;
+}
+
+**Question 25: Find Average of N Numbers**
+
+Write a C program using a while loop to take N numbers from the user and find their average.
+
+#include <iostream>
+using namespace std;
+int main() {
+    int n,i=1;
+    float num,sum=0;
+    cout<<"enter the total number";
+    cin>>n;
+    while(i<=n){
+        cout<<"enter the number";
+        cin>>num;
+        sum=sum+num;
+        i++;
+    }
+    cout<<"average"<<sum<<endl;
+    
+    
+    return 0;
+}
+
+
+Question 26: Print Alphabets A to Z**
+
+Write a C program using a while loop to print all uppercase alphabets from A to Z.
+
+#include <iostream>
+using namespace std;
+int main() {
+    char ch;
+    cout<<"enter the character";
+    cin>>ch;
+    while(ch<='Z'){
+        cout<<ch<<endl;
+        ch++;
+    }
+    
+    
+    return 0;
+}
+
+
+Question 27: Menu Driven Calculator**
+
+Write a C program using a while loop that repeatedly asks for a choice:
+
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+5. Exit
+
+Perform the selected operation until the user chooses Exit.
+
+#include<iostream>
+using namespace std;
+int main(){
+    int choice,c,a,b;
+    while(choice!=0){
+        cout<<"enter the number";
+        cin>>choice;
+        if(choice==1){
+            cout<<"enter the number";
+            cin>>a;
+            cin>>b;
+            c=a+b;
+            cout<<"addition :"<<c<<endl;
+            
+        }
+        else if(choice==2){
+            cout<<"enter the number";
+            cin>>a;
+            cin>>b;
+            c=a-b;
+            cout<<"substraction :"<<c<<endl;
+        }
+        else if(choice==3){
+            cout<<"enter the number";
+            cin>>a;
+            cin>>b;
+            c=a*b;
+            cout<<"multiplication :"<<c<<endl;
+            
+        }
+        else if(choice==4){
+            cout<<"enter the number";
+            cin>>a;
+            cin>>b;
+            c=a/b;
+            cout<<"division :"<<c<<endl;
+        }
+        else if(choice==5){
+            cout<<"exit";
+            break;
+        }
+        else{
+            cout<<"choice only valid number";
+        }
+    }
+    
+    return 0;
+}
+
+
+
+Question 30: Find Sum of Even and Odd Numbers Separately (1–N)**
+
+Write a C program using a while loop to find the sum of even and odd numbers separately from 1 to N.
+
+
+#include<iostream>
+using namespace std;
+int main(){
+    int n,i=1,sumeven=0,sumodd=0;
+    cout<<"enter the number";
+    cin>>n;
+    while(i<=n){
+        if(i%2==0){
+            sumeven=sumeven+i;
+        }
+        else{
+            sumodd=sumodd+i;
+        }
+        
+        i++;
+    }
+    cout<<"sum of even number ="<<sumeven<<endl;
+    cout<<"sum of odd number ="<<sumodd<<endl;
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
