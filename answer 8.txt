@@ -1,0 +1,284 @@
+=============================================================================================
+
+
+1. Write a program to find the sum of squares of first n natural numbers using a for loop.
+
+#include<iostream>
+using namespace std;
+int main(){
+    int n,i,sum=0;
+    cout<<"enter the number=";
+    cin>>n;
+    for(i=1;i<=n;i++){
+        sum=sum+(i*i);
+    }
+    
+    cout<<"sum of square="<<sum<<endl;
+    
+    return 0;
+}
+
+
+2. Write a program to find the sum of cubes of digits of a given number.
+
+
+#include<iostream>
+using namespace std;
+int main(){
+    int n,sum=0,digit;
+    cout<<"Enter the number = ";
+    cin>>n;
+    for(;n!=0;n=n/10){
+        digit=n%10;
+        sum=sum+(digit*digit*digit);
+        
+    }
+    cout<<"Sum of cube = "<<sum<<endl;
+    
+    return 0;
+}
+
+3. Write a program to check whether a number is an Armstrong number using a for loop.
+
+#include<iostream>
+using namespace std;
+int main(){
+    int n,sum=0,digit,temp;
+    cout<<"Enter the number = ";
+    cin>>n;
+    temp=n;
+    for(;n!=0;n=n/10){
+        digit=n%10;
+        sum=sum+(digit*digit*digit);
+        
+    }
+    cout<<sum<<endl;
+    if(temp==sum){
+        cout<<"it is a amstrong number";
+    }
+    else{
+        cout<<"it is not a amstrong number";
+    }
+    
+    return 0;
+}
+
+
+4. Write a program to check whether a number is a palindrome using a for loop.
+
+#include<iostream>
+using namespace std;
+int main(){
+    int n,digit,temp,rev=0;
+    cout<<"Enter the number";
+    cin>>n;
+    temp=n;
+    for(;n!=0;n=n/10){
+        digit=n%10;
+        rev=rev*10+digit;
+        
+    }
+    cout<<rev<<endl;
+    if(temp==rev){
+        cout<<"It is a palindrome number";
+    }
+    else{
+        cout<<"It is not a palindrome number";
+    }
+    
+    return 0;
+}
+
+5. Write a program to count the number of even and odd digits in a given number.
+
+
+#include<iostream>
+using namespace std;
+int main(){
+    int n,digit,even=0,odd=0;
+    cout<<"Enter the number :";
+    cin>>n;
+    for(;n!=0;n=n/10){
+        digit=n%10;
+        if(digit%2==0){
+            even++;
+        }
+        else{
+            odd++;
+        }
+        
+    }
+    cout<<"even number"<<even<<endl;
+    cout<<"odd number"<<odd<<endl;
+    
+    return 0;
+}
+
+6. Write a program to find the reverse of a number and check whether it is a prime number.
+
+
+
+#include<iostream>
+using namespace std;
+int main(){
+   int n,digit,rev=0,count=0;
+   cout<<"enter the number :";
+   cin>>n;
+   for(;n!=0;n=n/10){
+       digit=n%10;
+       rev=rev*10+digit;
+       
+   }
+    cout<<"reversed number :" <<rev<<endl;
+    int i;
+    
+    for(i=1;i<=rev;i++){
+        if(rev%i==0)
+        count++;
+    }
+    cout<<count;
+    if(count==2){
+        cout<<"it is a prime number";
+    }
+    else{
+        cout<<"it is not a prime number";
+    }
+    
+    return 0;
+}
+7. Write a program to print all prime numbers between 1 and n using a for loop.
+
+
+#include<iostream>
+using namespace std;
+int main(){
+    int n,i,j,count;
+    cout<<"Enter the number : ";
+    cin>>n;
+    for(i=2;i<=n;i++){
+        count=0;
+        for(j=1;j<=i;j++){
+            if(i%j==0){
+                count++;
+            }
+        }
+        
+        if(count==2){
+            cout<<i<<" ";
+        }
+    }
+    
+    
+    return 0;
+}
+
+8. Write a program to find the sum of all prime numbers between 1 and n.
+#include<iostream>
+using namespace std;
+int main(){
+    int n,i,j,count,sum=0;
+    cout<<"enter the number";
+    cin>>n;
+    for(i=2;i<=n;i++){
+        count=0;
+        for(j=1;j<=i;j++){
+            if(i%j==0){
+                count++;
+            }
+        }
+            
+        
+        if(count==2){
+            cout<<i<<" "<<endl;
+            sum=sum+i;
+        }
+       
+    }
+    cout<<"sum of the digit"<<sum<<endl;
+    
+    
+    
+    
+    
+    return 0;
+}
+
+9. Write a program to find the largest and smallest digit in a given number using a for loop.
+
+
+#include<iostream>
+using namespace std;
+int main(){
+    int n,i,max=0,digit,min=9;
+    cout<<"enter the number";
+    cin>>n;
+    for(;n!=0;n=n/10){
+        digit=n%10;
+        if(digit>max){
+            max=digit;
+            
+        }
+         
+        if(digit<min){
+            min=digit;
+        } 
+        
+        
+    }
+    cout<<"the max digit"<<max<<endl;
+    cout<<"the minimum digit"<<min<<endl;
+    
+    
+    return 0;
+}
+
+
+10. Write a program to print Fibonacci series up to n terms using a for loop.
+
+#include<iostream>
+using namespace std;
+int main(){
+    int n,i,n1=0,n2=1,n3;
+    cout<<"enter the number";
+    cin>>n;
+    for(i=1;i<=n;i++){
+        cout<<n1<<" ";
+        n3=n1+n2;
+        n1=n2;
+        n2=n3;
+    }
+    
+    
+    return 0;
+}
+
+11. Write a program to check whether a number is a perfect number using a for loop.
+
+#include<iostream>
+using namespace std;
+int main(){
+    int n,i,sum=0;
+    cout<<"enter the number";
+    cin>>n;
+    for(i=1;i<n;i++){
+        if(n%i==0){
+            
+            
+            sum=sum+i;
+        }
+        
+    }
+    
+    if(sum==n){
+        cout<<"it is a perfect nummber";
+    }
+    else{
+        cout<<"it is not a perfect number";
+    }
+    
+    
+    return 0;
+}
+
+
+
