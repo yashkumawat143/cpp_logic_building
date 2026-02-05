@@ -1,0 +1,526 @@
+1.. Write a function to add two numbers using arguments and return the sum.
+
+#include<iostream>
+using namespace std;
+int sum(int a,int b);
+    
+
+
+int main(){
+
+int ans=sum(5,5);
+    cout<<"the answer"<<ans<<endl;
+    
+    return 0;
+
+}
+
+int sum(int a,int b){
+    return a+b;
+}
+
+2..  Write a function to find the square of a number.
+
+#include<iostream>
+using namespace std;
+int square(int a);
+
+int main(){
+
+int ans=square(4);
+cout<<"The square of the number :"<<ans<<endl;
+
+return 0;
+}
+int square(int a){
+   return a*a;
+    
+}
+
+3.. Write a function to print your name.
+
+#include<iostream>
+using namespace std;
+string name();
+int main(){
+
+string ans=name();
+    cout<<ans<<endl;
+
+
+    
+return 0;}
+string name(){
+
+    return"yash kumawat";
+}
+
+
+4.. Write a function to print numbers from 1 to 10.
+
+#include<iostream>
+using namespace std;
+void num(int n);
+
+int main(){
+    int n;
+    num(n);
+    
+    return 0;
+}
+void num(int n){
+    for(int i=1;i<=10;i++){
+        cout<<i<<endl;
+    }
+    
+}
+
+5...Write a function to find the maximum of two numbers.
+
+#include<iostream>
+using namespace std;
+int max(int a,int b);
+
+int main(){
+
+int ans=max(4,2);
+    cout<<"the maximum number"<<ans<<endl;
+    
+    
+    return 0;
+}
+
+int max(int a,int b){
+if(a>b){
+    return a;
+}
+    else{
+    return b;
+    }
+}
+
+    
+6.. Write a function to check whether a number is even or odd.
+
+
+#include<iostream>
+using namespace std;
+string evenodd(int n);
+
+int main(){
+    int n;
+    cout<<"enter the number";
+    cin>>n;
+    string ans=evenodd(n);
+    cout<<ans<<endl;
+    
+    return 0;
+}
+string evenodd(int n){
+    if(n%2==0){
+        return"the number is even";
+    }
+    else{
+        return"the number is odd";
+    }
+    
+
+}
+
+
+
+7..  Write a function to calculate the sum of two integers.
+
+
+#include<iostream>
+using namespace std;
+int sum(int a, int b);
+
+int main(){
+
+    int a,b;
+    cout<<"Enter the number :";
+    cin>>a>>b;
+    int ans=sum(a,b);
+    cout<<"The sum of two integers :" <<ans<<endl;
+
+    
+    return 0;
+}
+
+int sum(int a,int b){
+    return a+b;
+}
+
+8...Write a function to find the cube of a number.
+
+
+
+#include<iostream>
+using namespace std;
+int cube(int a);
+
+
+int main(){
+
+    int a;
+    cout<<"Enter the number : ";
+    cin>>a;
+    int ans=cube(a);
+    cout<<"The cube of the number :"<<ans<<endl;
+
+    
+    return 0;
+}
+
+int cube(int a){
+    return a*a*a;
+}
+
+
+ 9..  Write a function to return the factorial of a number.
+
+#include<iostream>
+using namespace std;
+int fac(int a,int b);
+
+
+int main(){
+    int a,b;
+    cout<<"Enter the number";
+    cin>>b;
+    int ans=fac(a,b);
+    cout<<"The factorial of the number"<<ans<<endl;
+    
+    
+    return 0;
+}
+int fac(int a,int b){
+    int fac=1;
+    for(a=1;a<=b;a++){
+        fac=fac*a;
+    }
+    return fac;
+    
+    
+}
+
+
+
+10...  Write a function to check if a number is positive or negative.
+
+#include<iostream>
+using namespace std;
+string num(int a);
+
+int main(){
+    int a;
+    cout<<"Enter the number";
+    cin>>a;
+    string ans=num(a);
+    cout<<ans<<endl;
+    
+    
+    return 0;
+}
+string num(int a){
+    if(a>0){
+        return "the number is postive";
+        
+    }
+    else if(a<0){
+        return "the number is negative";
+    }
+    else{
+        return "the number is zero";
+    }
+}
+
+
+11...Write a function to swap two numbers (using call by value).
+
+
+#include<iostream>
+using namespace std;
+void swap(int a,int b);
+
+int main(){
+    int a,b;
+    cout<<"enter the number";
+    cin>>a>>b;
+    cout<<"before"<<"a= "<<a<<" b="<<b<<endl;
+    swap(a,b);
+    cout<<"after"<<"a= "<<a<<" b="<<b<<endl;
+    
+    
+    return 0;
+}
+void swap(int a,int b){
+    int temp;
+    temp=a;
+    a=b;
+    b=temp;
+    cout<<"inner function"<<"a="<<a<<" b="<<b<<endl;
+    
+    
+    
+}
+12....  Write a function to swap two numbers (using call by reference).
+
+#include<iostream>
+using namespace std;
+void swap(int &a,int &b);
+
+
+int main(){
+    int x,y;
+    cout<<"enter the number";
+    cin>>x>>y;
+    cout<<"before"<<"x="<<x<<" y="<<y<<endl;
+    swap(x,y);
+    cout<<"after"<<"x="<<x<<" y="<<y<<endl;
+    
+    
+    return 0;
+}
+
+void swap(int &a,int &b){
+    int temp;
+    temp=a;
+    a=b;
+    b=temp;
+    cout<<"inner function"<<"a="<<a<<" b="<<b<<endl;
+    
+}
+
+13... Write a function to calculate simple interest.
+
+
+#include<iostream>
+using namespace std;
+float si(float p,float r,float t);
+
+
+int main(){
+    float p,r,t;
+    cout<<"Enter the number :";
+    cin>>p>>r>>t;
+    float ans=si(p,r,t);
+    cout<<"The simple intrest :"<<ans<<endl;
+    
+    
+    
+    
+    return 0;
+}
+
+float si(float p,float r,float t){
+    
+    return (p*r*t)/100;
+    
+    
+    
+    
+}
+
+
+ 14... Write a function to find the area of a circle.
+
+
+#include<iostream>
+using namespace std;
+float area(float r);
+
+
+int main(){
+    float r;
+    cout<<"Enter the number :";
+    cin>>r;
+    float ans=area(r);
+    cout<<"The area of the circle :"<<ans<<endl;
+    
+    
+    return 0;
+}
+
+float area(float r){
+    return 3.14*r*r;
+    
+    
+}
+
+15... Write a function to print a star triangle pattern.
+
+#include<iostream>
+using namespace std;
+void pattern(int n);
+
+int main(){
+    int n;
+    cout<<"Enter the number :";
+    cin>>n;
+    pattern(n);
+    
+    return 0;
+}
+
+void pattern(int n){
+    int i,j;
+    for(i=1;i<=n;i++){
+        for(j=1;j<=i;j++){
+            cout<<" * ";
+        }
+        cout<<endl;
+    }
+    
+    
+}
+
+
+
+16...Write a function to print numbers from 1 to n.
+
+#include<iostream>
+using namespace std;
+void num(int n);
+
+int main(){
+    int n;
+    cout<<"Enter the number : ";
+    cin>>n;
+    num(n);
+    
+    
+    return 0;
+}
+
+void num(int n){
+    for(int i=1;i<=n;i++){
+        cout<<i<<" ";
+    }
+    
+}
+
+
+17...Write a function to find the sum of first n natural numbers.
+
+
+#include<iostream>
+using namespace std;
+void sum(int n);
+
+int main(){
+    
+    int n;
+    cout<<"Enter the number : ";
+    cin>>n;
+    sum(n);
+    
+    
+    return 0;
+}
+
+void sum(int n){
+    int sum=0,digit;
+    for(;n!=0;n=n/10){
+        digit=n%10;
+        sum=sum+digit;
+        
+    }
+    cout<<"The sum of the number :"<<sum<<endl;
+    
+    
+}
+
+ 18...Write a function to check whether a number is prime.
+
+#include<iostream>
+using namespace std;
+void prime(int n);
+
+int main(){
+    int n;
+    cout<<"Enter the number :";
+    cin>>n;
+    prime(n);
+    
+    return 0;
+}
+
+void prime(int n){
+    int count=0;
+    for(int i=1;i<=n;i++){
+        if(n%i==0){
+        count++;
+    }
+    }
+    if(count==2){
+        cout<<"it is a prime number";
+    }
+    else{
+        cout<<"it is not a prime number";
+    }
+    
+    
+
+}
+
+19....Write a function to reverse a number.
+
+#include<iostream>
+using namespace std;
+void reverse(int n);
+
+int main(){
+    int n;
+    cout<<"Enter the number :";
+    cin>>n;
+    reverse(n);
+    
+    return 0;
+}
+void reverse(int n){
+    int rev=0,digit,temp;
+    temp=n;
+    for(;n!=0;n=n/10){
+        digit=n%10;
+        rev=rev*10+digit;
+    }
+if(temp==rev){
+    cout<<"it is a reversed number";
+}    
+else{
+    cout<<"it is not a reversed number";
+}
+    
+}
+
+
+20...Write a function to count digits in a number.
+
+#include<iostream>
+using namespace std;
+void count(int n);
+
+int main(){
+    
+    int n;
+    cout<<"Enter the number :";
+    cin>>n;
+    count(n);
+    
+    return 0;
+}
+
+void count(int n){
+    int count=0,digit;
+    for(;n!=0;n=n/10){
+    count++;
+    
+}
+cout<<"count the number :"<<count<<endl;
+}
+
+
+
+
